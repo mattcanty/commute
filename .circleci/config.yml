@@ -1,0 +1,8 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cnadiminti/aws-sam-local
+    steps:
+      - checkout
+      - run: validate
