@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: cnadiminti/aws-sam-local
-    working_directory: sam
+    working_directory: ~/project/app
     steps:
       - checkout
       - run: sam validate
