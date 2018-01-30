@@ -1,0 +1,19 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id="app">
+            <a href=https://www.strava.com/oauth/authorize?client_id=12589&response_type=code&redirect_uri=http://localhost:3000/token_exchange&approval_prompt=force>Connect with Strava</a>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello Vue!'
+                }
+            })
+        </script>
+    </body>
+</html>

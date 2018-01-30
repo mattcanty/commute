@@ -1,0 +1,32 @@
+{
+  "name": "commute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattcanty/commute.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattcanty/commute/issues"
+  },
+  "homepage": "https://github.com/mattcanty/commute#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.1",
+    "lowdb": "^1.0.0",
+    "request": "^2.83.0",
+    "shortid": "^2.2.8",
+    "strava-v3": "^1.14.0"
+  }
+}

@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: A serverless commuting app for cyclists
+Resources:
+  ExchangeStravaToken:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: nodejs6.10
+      Handler: index.exchangeStravaTokenHandler
+      Events:
+        TokenExchange:
+          Type: Api
+          Properties:
+            Path: /token_exchange
+            Method: any

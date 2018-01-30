@@ -5,4 +5,4 @@ jobs:
       - image: cnadiminti/aws-sam-local
     steps:
       - checkout
-      - run: sam validate app
+      - run: sam validate ./app/template.yml
