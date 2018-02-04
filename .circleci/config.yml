@@ -5,7 +5,6 @@ jobs:
       - image: cnadiminti/aws-sam-local
     steps:
       - checkout
-      - run: |
-          sam validate ./template.yml
-          sam package --template-file template.yaml --s3-bucket commute-matt-canty --output-template-file package.yaml
-          sam deploy --template-file package.yaml --stack-name commute-app --capabilities CAPABILITY_IAM
+      - run: sam validate ./template.yml
+      - run: sam package --template-file ./template.yaml --s3-bucket commute-matt-canty --output-template-file ./package.yaml
+      - run: sam deploy --template-file ./package.yaml --stack-name commute-app --capabilities CAPABILITY_IAM
