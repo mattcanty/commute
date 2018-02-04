@@ -1,6 +1,6 @@
-version: '2'
+version: '3'
 services:
-  aws-sam-local:
+  local:
     image: cnadiminti/aws-sam-local
     command: local start-api --docker-volume-basedir "$PWD" --host 0.0.0.0
     ports:
@@ -18,11 +18,3 @@ services:
       - 8000:8000
     volumes:
       - $PWD:/dynamodb_local_db
-  node-server:
-    build: ./server
-    ports:
-      - 3000:3000
-    volumes:
-      - ./server:/server
-    working_dir:
-      /server

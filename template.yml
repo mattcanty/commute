@@ -3,14 +3,21 @@ Transform: AWS::Serverless-2016-10-31
 
 Description: A serverless commuting app for cyclists
 Resources:
+  UsersTable:
+    Type: AWS::Serverless::SimpleTable
   ExchangeStravaToken:
     Type: AWS::Serverless::Function
     Properties:
       Runtime: nodejs6.10
       Handler: index.exchangeStravaTokenHandler
+      Policies: AmazonDynamoDBFullAccess
+      Environment:
+        Variables:
+          USERS_TABLE_NAME: !Ref UsersTable
+      Timeout: 10
       Events:
         TokenExchange:
           Type: Api
           Properties:
             Path: /token_exchange
-            Method: any
+            Method: GET

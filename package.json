@@ -21,12 +21,10 @@
   },
   "homepage": "https://github.com/mattcanty/commute#readme",
   "dependencies": {
+    "aws-sdk": "^2.188.0",
     "dotenv": "^4.0.0",
-    "express": "^4.16.2",
     "jsonwebtoken": "^8.1.1",
-    "lowdb": "^1.0.0",
-    "request": "^2.83.0",
-    "shortid": "^2.2.8",
-    "strava-v3": "^1.14.0"
+    "strava-v3": "^1.14.0",
+    "uuid": "^3.2.1"
   }
 }

@@ -1,1 +1,1 @@
-`docker-compose run --service-ports dev`
+`docker-compose run --service-ports local`
